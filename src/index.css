@@ -1,5 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 :root {
-  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
 
@@ -65,4 +69,54 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.animated-gradient {
+  background: linear-gradient(-45deg, #ffffff, #dfdfdf, #d0e2ff, #89daff);
+  background-size: 400% 400%;
+  animation: gradientShift 15s ease infinite;
+}
+
+
+.animated-gradient {
+  background: linear-gradient(270deg, #fbfffa, #ffffff, #d9e8ff, #8ceeff);
+  background-size: 800% 800%;
+  animation: gradientShift 10s ease infinite;
+}
+
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Custom scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
 }

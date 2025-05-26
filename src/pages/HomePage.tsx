@@ -58,11 +58,11 @@ const HomePage = () => {
         transition={{ duration: 0.6 }}
         className="relative z-10 flex flex-col items-center space-y-4 mb-10"
       >
-        <FaProjectDiagram className="text-indigo-600 dark:text-indigo-300 text-6xl mb-4 animate-pulse h-100" />
+        <FaProjectDiagram className="text-black dark:text-black text-6xl mb-4 animate-pulse h-100" />
         <h1 className="text-4xl md:text-5xl font-extrabold text-gray-800 dark:text-white drop-shadow">
           Programación Lineal <br /> Interactiva
         </h1>
-        <p className="text-lg text-gray-600 dark:text-gray-300 max-w-xl">
+        <p className="text-lg text-black dark:text-black max-w-xl">
           Descubre el poder de optimizar soluciones mediante programación lineal.
         </p>
 

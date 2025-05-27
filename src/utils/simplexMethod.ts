@@ -126,17 +126,23 @@ export const generateSimplexSteps = (problem: LPProblem): SimplexStep[] => {
     iteration++;
   }
 
-  // Add final solution
-  if (iteration <= 10) {
-    const isOptimal = problem.objective.type === 'max' 
-      ? currentTableau.z.every(coef => coef >= 0)
-      : currentTableau.z.every(coef => coef <= 0);
+// Add final solution
+if (iteration <= 10) {
+  const isOptimal = problem.objective.type === 'max' 
+    ? currentTableau.z.every(coef => coef >= 0)
+    : currentTableau.z.every(coef => coef <= 0);
 
-    steps.push({
-      tableau: currentTableau,
-      explanation: isOptimal ? 'Solución óptima encontrada' : 'No se encontró solución óptima'
-    });
+  // ✅ CORRECCIÓN AQUÍ
+  if (problem.objective.type === 'max') {
+    currentTableau.z0 *= -1;
   }
+
+  steps.push({
+    tableau: currentTableau,
+    explanation: isOptimal ? 'Solución óptima encontrada' : 'No se encontró solución óptima'
+  });
+}
+
 
   return steps;
 }; 

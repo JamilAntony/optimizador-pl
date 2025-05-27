@@ -5,4 +5,8 @@ export default {
   },
   plugins: [],
 };
-    
+// tailwind.config.js
+module.exports = {
+  darkMode: 'class', // o 'media'
+  // ...
+}

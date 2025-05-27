@@ -180,7 +180,7 @@ const LinearProgrammingPage: React.FC = () => {
             transition={{ duration: 0.5 }}
             className="bg-white/90 rounded-3xl shadow-xl border border-blue-200 p-6 flex flex-col items-center gap-6"
           >
-            <h2 className="text-2xl font-bold text-indigo-700 text-center">
+            <h2 className="text-black dark:text-black text-6xl mb-4 animate-pulse h-100">
               Selecciona el método de solución
             </h2>
             <div className="flex justify-center space-x-6 px-4">
@@ -214,7 +214,7 @@ const LinearProgrammingPage: React.FC = () => {
               transition={{ duration: 0.6 }}
               className="bg-white/90 rounded-3xl shadow-xl border border-indigo-200 p-6 sm:p-8"
             >
-              <h2 className="text-xl sm:text-2xl font-bold text-indigo-700 mb-4 text-center">
+              <h2 className="text-xl sm:text-2xl font-bold text-black mb-4 text-center">
                 Configuración del Problema
               </h2>
               <div className="rounded-xl border border-indigo-100 bg-white p-4 shadow-sm hover:shadow-md transition-all duration-300">
@@ -250,7 +250,7 @@ const LinearProgrammingPage: React.FC = () => {
                   className="group relative inline-flex items-center px-8 py-3 font-semibold rounded-full bg-gradient-to-r from-indigo-500 to-blue-600 text-white shadow-lg hover:scale-105 transition transform duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
                 >
                   <span className="absolute inset-0 bg-white opacity-10 blur-sm group-hover:opacity-20 transition duration-300" />
-                  <span className="relative z-10 text-lg">Resolver Problema</span>
+                  <span className="relative z-10 text-lg text-black">Resolver Problema</span>
                 </button>
               </div>
             </motion.div>
@@ -258,7 +258,7 @@ const LinearProgrammingPage: React.FC = () => {
               <div id="resultado-pdf">
                 {solutionMethod && (
                   <div className="text-center">
-                    <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 font-semibold">
+                    <span className="inline-block px-4 py-2 rounded-full bg-indigo-100 text-black font-semibold">
                       Resolviendo por método: {solutionMethod === 'graphical' ? 'Gráfico' : 'Simplex'}
                     </span>
                   </div>
@@ -291,8 +291,8 @@ const LinearProgrammingPage: React.FC = () => {
                 )}
                 {!error && !graphicalSteps && !simplexSteps && (
                   <div className="bg-white/80 rounded-3xl p-8 text-center border border-indigo-100 shadow">
-                    <p className="text-indigo-400 text-lg">
-                      Ingrese los datos del problema y haga clic en <span className="font-bold text-indigo-600">"Resolver"</span> para ver la solución
+                    <p className="text-black text-lg">
+                      Ingrese los datos del problema y haga clic en <span className="font-bold text-black">"Resolver"</span> para ver la solución
                     </p>
                   </div>
                 )}

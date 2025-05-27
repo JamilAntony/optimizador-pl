@@ -121,7 +121,7 @@ const GraphicalMethodSteps: React.FC<GraphicalMethodStepsProps> = ({
 
   return (
     <div className="bg-white rounded-2xl shadow-xl border border-blue-100 p-6 sm:p-8 flex flex-col gap-8">
-      <h2 className="text-2xl font-bold text-blue-700 mb-2 text-center">Método Gráfico</h2>
+      <h2 className="text-2xl font-bold text-black mb-2 text-center">Método Gráfico</h2>
       <div className="w-full flex flex-col items-center justify-center">
         <div className="w-full max-w-2xl bg-white border border-blue-100 rounded-xl shadow p-2">
           <Plot
@@ -135,7 +135,7 @@ const GraphicalMethodSteps: React.FC<GraphicalMethodStepsProps> = ({
       </div>
 
       <div className="bg-blue-50 border border-blue-100 rounded-xl shadow p-4">
-        <h3 className="text-lg font-semibold text-blue-700 mb-3">Pasos del Método</h3>
+        <h3 className="text-lg font-semibold text-black mb-3">Pasos del Método</h3>
         <ol className="list-decimal list-inside space-y-2">
           {steps.map((step, index) => (
             <li key={index} className="text-blue-900">
@@ -147,13 +147,13 @@ const GraphicalMethodSteps: React.FC<GraphicalMethodStepsProps> = ({
 
       {optimalPoint && (
         <div className="bg-blue-100 border border-blue-300 rounded-xl shadow p-4 flex flex-col items-center">
-          <h3 className="text-lg font-bold text-blue-900 mb-2">Solución Óptima</h3>
+          <h3 className="text-lg font-bold text-black mb-2">Solución Óptima</h3>
           <div className="space-y-1 text-blue-800 text-base">
             <div>
-              <span className="font-semibold">Punto óptimo:</span> {optimalPoint.label}
+              <span className="text-lg font-semibold text-black mb-2">Punto óptimo:</span> {optimalPoint.label}
             </div>
             <div>
-              <span className="font-semibold">Valor objetivo:</span>{' '}
+              <span className="font-semibold text-black">Valor objetivo:</span>{' '}
               {(objective.coefficients[0] * optimalPoint.x + objective.coefficients[1] * optimalPoint.y).toFixed(2)}
             </div>
           </div>
